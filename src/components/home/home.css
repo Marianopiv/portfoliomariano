@@ -1,0 +1,207 @@
+  .title {
+  font-family: "Poppins";
+
+  /* Gradirnt1 */
+
+  background: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.cv {
+  filter: drop-shadow(0px 20px 50px rgba(0, 178, 255, 0.25));
+  border-radius: 200px;
+  position: absolute;
+  width: 170.25px;
+  height: 163.25px;
+  left: 29.94px;
+  top: 230px;
+  border: 2px solid;
+
+  background: linear-gradient(
+    360.6deg,
+    #13adc7 21.25%,
+    #6978d1 58.73%,
+    #945dd6 77.47%
+  );
+  border: 2px solid;
+
+  box-shadow: 0px 20px 50px 0px #00b2ff40;
+}
+.ellipse-14 {
+  box-sizing: border-box;
+  position: absolute;
+  width: 306.31px;
+  height: 346.31px;
+  left: -114.23px;
+  top: 212.69px;
+
+  border-image-source: linear-gradient(
+    326.6deg,
+    #13adc7 21.25%,
+    #945dd6 77.47%,
+    #6978d1 58.73%
+  );
+
+  border-image-source: linear-gradient(
+    326.6deg,
+    #13adc7 21.25%,
+    #6978d1 58.73%,
+    #945dd6 77.47%
+  );
+
+  border-image-source: linear-gradient(
+    326.6deg,
+    #13adc7 21.25%,
+    #6978d1 58.73%,
+    #945dd6 77.47%
+  );
+}
+.ellipse-15 {
+  position: absolute;
+  width: 102.92px;
+  height: 102.92px;
+  left: 136.23px;
+  top: 341.07px;
+
+  /* Gradient2 */
+  /* Neon for Button */
+
+  box-shadow: 0px 10px 30px rgba(0, 178, 255, 0.35);
+
+  border-image-source: linear-gradient(
+    326.6deg,
+    #13adc7 21.25%,
+    #6978d1 58.73%,
+    #945dd6 77.47%
+  );
+  background: linear-gradient(
+    326.6deg,
+    #13adc7 21.25%,
+    #6978d1 58.73%,
+    #945dd6 77.47%
+  );
+}
+.cvlg {
+  filter: drop-shadow(0px 20px 50px rgba(0, 178, 255, 0.25));
+  border-radius: 200px;
+  position: absolute;
+  width: 170.25px;
+  height: 163.25px;
+  right: 329.94px;
+  top: 30px;
+  border: 2px solid;
+
+  background: linear-gradient(
+    360.6deg,
+    #13adc7 21.25%,
+    #6978d1 58.73%,
+    #945dd6 77.47%
+  );
+  border: 2px solid;
+
+  box-shadow: 0px 20px 50px 0px #00b2ff40;
+}
+
+.ellipse-14lg {
+  box-sizing: border-box;
+  position: absolute;
+  width: 306.31px;
+  height: 346.31px;
+  right:320.23px;
+  top: 80.69px;
+
+}
+
+.ellipse-15lg {
+  position: absolute;
+  width: 102.92px;
+  height: 102.92px;
+  right: 286.23px;
+  top: 161.07px;
+
+  /* Gradient2 */
+  /* Neon for Button */
+
+  box-shadow: 0px 10px 30px rgba(0, 178, 255, 0.35);
+
+  border-image-source: linear-gradient(
+    326.6deg,
+    #13adc7 21.25%,
+    #6978d1 58.73%,
+    #945dd6 77.47%
+  );
+  background: linear-gradient(
+    326.6deg,
+    #13adc7 21.25%,
+    #6978d1 58.73%,
+    #945dd6 77.47%
+  );
+}
+
+.poppins {
+  font-family: "Poppins";
+}
+
+.btn-class {
+  padding: 16px 20px;
+
+  width: 145px;
+  height: 55px;
+
+  /* Gradirnt1 */
+
+  background: linear-gradient(270deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%);
+  box-shadow: 0px 7.26629px 21.7989px rgba(0, 178, 255, 0.35);
+  border-radius: 43.5977px;
+  font-family: "Poppins";
+  font-style: normal;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+
+/* Buttons Mobile */
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+}
+.btnBlack {
+    background: black!important;
+}
+
+@media (min-width: 640px) {
+    .sm\:left-120 {
+        left: 30rem;
+    }
+    .sm\:left-135 {
+        left: 36rem;
+    }
+}
+
+@media (min-width: 768px) {
+  .md\:left-140 {
+      left: 38rem;
+  }
+  .md\:left-150 {
+      left: 45rem;
+  }
+  .md\:left-130 {
+      left: 29rem!important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:left-150 {
+      left:50!important;
+  }
+  .lg\:left-160 {
+      left:58rem;
+  }
+}
