@@ -36,7 +36,7 @@ const AboutMe = () => {
             </div>
           ))}
           <div className="absolute border-2 opacity-80 h-96  left-14 sm:left-custom"></div>
-          <div className="absolute border-2 opacity-80 h-10 top-96  left-14 sm:left-custom"></div>
+          <div className="absolute border-2 opacity-80 h-2 top-96  left-14 sm:left-custom"></div>
         </div>
         <div className="hidden gap-4 relative md:flex">
           {fullSobreMi&&fullSobreMi.map(({ año, texto }, index) => (

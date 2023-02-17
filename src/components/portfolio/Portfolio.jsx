@@ -28,7 +28,7 @@ const Portfolio = () => {
         </h3>
       </div>
       <div className="flex justify-center">
-        <div className="flex flex-col gap-8 sm:flex-row items-center justify-center flex-wrap">
+        <div className="flex flex-col gap-10 sm:flex-row items-center justify-center flex-wrap">
           {fullProyectos&&fullProyectos.map(({ name, descripcion, img, tecnologias, url,github }) => (
             <Projecto
               url={url}

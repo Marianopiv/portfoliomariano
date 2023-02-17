@@ -25,7 +25,7 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-        <div className="flex p-4 items-center justify-between sm:justify-around sm:w-1/2  mx-8">
+        <div className="flex p-4 items-center justify-between sm:justify-around sm:w-1/3 xl:w-1/2  mx-6">
           <p
             className="text-xs hover:cursor-pointer "
             onClick={() => handleClick("portfolio")}
