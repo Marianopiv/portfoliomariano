@@ -17,7 +17,7 @@ const useServices = () => {
     }));
     console.log(resultado);
     setFullHabilidades(resultado);
-    setFullHabilidades(resultado.sort((a, b) => a - b))
+    setFullHabilidades(resultado.sort((a, b) => a.habilidad.localeCompare(b.habilidad)))
   };
 
   const obtenerProyectos = async () => {
