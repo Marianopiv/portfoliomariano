@@ -56,10 +56,10 @@ const Home = () => {
                   className={"hover:border-white border-2 border-black btn-class mt-8 text-xs pb-8"}
                 />
               </div>
-              <div className="hidden md:flex"><div className="w-96 h-96 circleTest border border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 ellipse-14lg"></div>
+              <div className="hidden md:flex pl-10 md:left-2/4 lg:left-auto"><div className="w-96 h-96 circleTest border border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 ellipse-14lg"></div>
                 <div className="hidden ellipse-15lg rounded-full md:flex"></div>
                 <img
-                  className="hidden cvlg border-2 border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 md:flex"
+                  className="hidden cvlg border-2 border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 md:flex md:left-2/4 lg:left-auto"
                   src={withBg}
                   alt=""
                 />
