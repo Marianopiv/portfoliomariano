@@ -5,7 +5,7 @@ import Portfolio from "../portfolio/Portfolio";
 import "animate.css";
 import Tecnologias from "../tecnologias/Tecnologias";
 import "./home.css";
-import ellipse14 from "../../assets/Ellipse 14.png";
+import ellipse14 from "../../assets/Ellipse-14.svg";
 import withBg from "../../assets/black-white.png";
 import Footer from "../footer/Footer";
 import cv from "../../assets/CV.pdf";
@@ -40,14 +40,12 @@ const Home = () => {
               programación.
             </p>
             <div className="h-96 sm:h-58 md:h-56  z-50 lg:flex">
+              
+              <img className="ellipse-14 md:hidden sm:top-20 md:left-130 " src={ellipse14} alt="" srcset="" />
+              <div className="absolute ellipse-15 rounded-full sm:left-135 sm:top-44 md:left-150 md:hidden"></div>
+              
               <img
-                className="absolute ellipse-14 rounded-full sm:left-80 sm:top-20 md:left-130 lg:hidden"
-                src={ellipse14}
-                alt=""
-              />
-              <div className="absolute ellipse-15 rounded-full sm:left-135 sm:top-44 md:left-150 lg:hidden"></div>
-              <img
-                className="absolute cv border-2 border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 sm:left-120 sm:top-10 md:left-140 lg:hidden"
+                className="absolute cv border-2 border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 sm:left-120 sm:top-10 md:left-140 md:hidden"
                 src={withBg}
                 alt=""
               />
@@ -58,15 +56,10 @@ const Home = () => {
                   className={"hover:border-white border-2 border-black btn-class mt-8 text-xs pb-8"}
                 />
               </div>
-              <div className="hidden lg:flex">
+              <div className="hidden md:flex"><div className="w-96 h-96 circleTest border border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 ellipse-14lg"></div>
+                <div className="hidden ellipse-15lg rounded-full md:flex"></div>
                 <img
-                  className="hidden ellipse-14lg rounded-full lg:flex"
-                  src={ellipse14}
-                  alt=""
-                />
-                <div className="hidden ellipse-15lg rounded-full lg:flex"></div>
-                <img
-                  className="hidden cvlg border-2 border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 lg:flex"
+                  className="hidden cvlg border-2 border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 md:flex"
                   src={withBg}
                   alt=""
                 />

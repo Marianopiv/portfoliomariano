@@ -18,7 +18,7 @@ const Portfolio = () => {
   
 
   return (
-    <div className="animate__animated animate__fadeIn sm:animate__fadeInUp bg-black pr-2">
+    <div className="animate__animated animate__fadeIn sm:animate__fadeInUp bg-black pr-2 md:pt-8">
       <div className="h-24 flex items-center drop-shadow-xl px-4">
         <h3
           className="widest font-bold text-white  portfolioTitle sm:pl-9 lg:pl-32 "

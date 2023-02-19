@@ -30,26 +30,6 @@
   left: -114.23px;
   top: 212.69px;
 
-  border-image-source: linear-gradient(
-    326.6deg,
-    #13adc7 21.25%,
-    #945dd6 77.47%,
-    #6978d1 58.73%
-  );
-
-  border-image-source: linear-gradient(
-    326.6deg,
-    #13adc7 21.25%,
-    #6978d1 58.73%,
-    #945dd6 77.47%
-  );
-
-  border-image-source: linear-gradient(
-    326.6deg,
-    #13adc7 21.25%,
-    #6978d1 58.73%,
-    #945dd6 77.47%
-  );
 }
 .ellipse-15 {
   position: absolute;
@@ -97,11 +77,17 @@
 .ellipse-14lg {
   box-sizing: border-box;
   position: absolute;
-  width: 346.31px;
-  height: 346.31px;
+  width:330px;
+  height:330px;
   right:320.23px;
   top: 80.69px;
+  
 
+}
+
+.circleTest {
+  
+  border-radius: 999999px;
 }
 
 .ellipse-15lg {
