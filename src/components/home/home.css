@@ -1,4 +1,4 @@
-  .title {
+.title {
   font-family: "Poppins";
 
   /* Gradirnt1 */
@@ -19,7 +19,6 @@
   left: 29.94px;
   top: 230px;
 
-  
   box-shadow: 0px 20px 50px 0px #00b2ff40;
 }
 .ellipse-14 {
@@ -29,7 +28,6 @@
   height: 346.31px;
   left: -114.23px;
   top: 212.69px;
-
 }
 .ellipse-15 {
   position: absolute;
@@ -77,16 +75,13 @@
 .ellipse-14lg {
   box-sizing: border-box;
   position: absolute;
-  width:330px;
-  height:330px;
-  right:320.23px;
+  width: 330px;
+  height: 330px;
+  right: 320.23px;
   top: 80.69px;
-  
-
 }
 
 .circleTest {
-  
   border-radius: 999999px;
 }
 
@@ -117,7 +112,6 @@
 }
 
 .intermediotamaño {
-  
 }
 
 .poppins {
@@ -142,45 +136,52 @@
   order: 0;
   flex-grow: 0;
 
+  /* Buttons Mobile */
 
-/* Buttons Mobile */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  
+}
+.btn-class:hover {
+  background: linear-gradient(270deg, #31CBE5 0%, #8796EF 66.67%, #B27BF4 100%);
+/* :Hover Neon for Button */
 
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 14px;
-line-height: 21px;
+box-shadow: 0px 10px 30px rgba(0, 178, 255, 0.5);
+border-radius: 60px;
 }
 .btnBlack {
-    background: black!important;
+  background: black !important;
 }
 
 @media (min-width: 640px) {
-    .sm\:left-120 {
-        left: 30rem;
-    }
-    .sm\:left-135 {
-        left: 36rem;
-    }
+  .sm\:left-120 {
+    left: 30rem;
+  }
+  .sm\:left-135 {
+    left: 36rem;
+  }
 }
 
 @media (min-width: 768px) {
   .md\:left-140 {
-      left: 38rem;
+    left: 38rem;
   }
   .md\:left-150 {
-      left: 45rem;
+    left: 45rem;
   }
   .md\:left-130 {
-      left: 29rem!important;
+    left: 29rem !important;
   }
 }
 
 @media (min-width: 1024px) {
   .lg\:left-150 {
-      left:50!important;
+    left: 50 !important;
   }
   .lg\:left-160 {
-      left:58rem;
+    left: 58rem;
   }
 }
