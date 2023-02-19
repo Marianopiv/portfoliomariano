@@ -49,7 +49,7 @@ const AboutMe = () => {
               <div className="item-point w-3 z-20 ">
               </div>
               <p className="w-40 text-left text-[#4f5257] story pt-3 xl:text-left ">
-                {texto&&texto.slice(0, 273)}
+                {texto&&año===2022?texto.slice(0, 303):texto}
               </p>
             </div>
           ))}
