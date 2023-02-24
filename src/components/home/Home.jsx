@@ -8,15 +8,15 @@ import "./home.css";
 import ellipse14 from "../../assets/Ellipse-14.svg";
 import withBg from "../../assets/black-white.png";
 import Footer from "../footer/Footer";
-import cv from "../../assets/cv-pividori.pdf";
 import Button from "../../UI/Button";
 
 const Home = () => {
   const downloadPDF = () => {
     const link = document.createElement("a");
-    link.href = cv;
-    link.download = `CV Pividori Frontend.pdf`
-    link.click();
+  link.href = "https://drive.google.com/file/d/1UT6wfzdzRX8qH3whtUE3N8G0uK1cQcb9/view?usp=sharing";
+  link.target = "_blank"; // abre en una nueva pestaña o ventana
+  link.download = "CV Pividori Frontend.pdf";
+  link.click();
   };
 
   return (
