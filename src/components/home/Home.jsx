@@ -8,14 +8,14 @@ import "./home.css";
 import ellipse14 from "../../assets/Ellipse-14.svg";
 import withBg from "../../assets/black-white.png";
 import Footer from "../footer/Footer";
-import cv from "../../assets/CV.pdf";
+import cv from "../../assets/cv-pividori.pdf";
 import Button from "../../UI/Button";
 
 const Home = () => {
   const downloadPDF = () => {
     const link = document.createElement("a");
     link.href = cv;
-    link.download = "CV Pividori.pdf";
+    link.download = "cv-pividori.pdf";
     link.click();
   };
 
