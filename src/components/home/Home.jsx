@@ -15,6 +15,7 @@ const Home = () => {
   const downloadPDF = () => {
     const link = document.createElement("a");
     link.href = cv;
+    link.href = cv + "?t=" + new Date().getTime();
     link.download = "cv-pividori.pdf";
     link.click();
   };
