@@ -13,11 +13,11 @@ import Button from "../../UI/Button";
 const Home = () => {
   const downloadPDF = () => {
     const link = document.createElement("a");
-  link.href = "https://drive.google.com/file/d/1UT6wfzdzRX8qH3whtUE3N8G0uK1cQcb9/view?usp=sharing";
-  link.target = "_blank"; // abre en una nueva pestaña o ventana
-  link.download = "CV Pividori Frontend.pdf";
-  link.click();
+    link.href = "https://drive.google.com/u/0/uc?id=1UT6wfzdzRX8qH3whtUE3N8G0uK1cQcb9&export=download";
+    link.download = "CV Pividori Frontend.pdf";
+    link.click();
   };
+  
 
   return (
     <div className="">
