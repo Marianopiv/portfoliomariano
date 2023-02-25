@@ -12,8 +12,9 @@ import Button from "../../UI/Button";
 
 const Home = () => {
   const downloadPDF = () => {
+    const fileID = "1Vh4q0aGKN-yNcz_NH-yqDFLaKrkWiLz_";
     const link = document.createElement("a");
-    link.href = "https://drive.google.com/u/0/uc?id=1UT6wfzdzRX8qH3whtUE3N8G0uK1cQcb9&export=download";
+    link.href = `https://drive.google.com/u/0/uc?id=${fileID}&export=download`;
     link.download = "CV Pividori Frontend.pdf";
     link.click();
   };
