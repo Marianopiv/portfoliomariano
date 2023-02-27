@@ -12,14 +12,15 @@ import Button from "../../UI/Button";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const { i18n,t } = useTranslation();
   const downloadPDF = () => {
     const fileID = "1Vh4q0aGKN-yNcz_NH-yqDFLaKrkWiLz_";
+    const fileIDEnglish =  "1WdK0HTRCWeqPWEyE7jhFWN-8dbKvxEtI"
     const link = document.createElement("a");
-    link.href = `https://drive.google.com/u/0/uc?id=${fileID}&export=download`;
+    link.href = `https://drive.google.com/u/0/uc?id=${i18n.language==="es"?fileID:fileIDEnglish}&export=download`;
     link.download = "CV Pividori Frontend.pdf";
     link.click();
   };
-  const { i18n,t } = useTranslation();
 
   const handleLanguageChange = () => {
     console.log("funcion");
