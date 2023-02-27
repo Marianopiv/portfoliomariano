@@ -1,12 +1,11 @@
-import { collection, getDocs } from "firebase/firestore";
 import React, { useEffect } from "react";
-import { tecnologias } from "../../config/config";
-import { db } from "../../FireBase";
+import { useTranslation } from "react-i18next";
 import useServices from "../../hook/useServices";
 import "./tecnologias.css"
 
 const Tecnologias = () => {
   const {obtenerHabilidades,fullHabilidades} = useServices()
+  const {t} = useTranslation()
 
   
 
@@ -21,7 +20,7 @@ const Tecnologias = () => {
           className=" font-bold text-white  portfolioTitle"
           id="tecnologias"
         >
-          Tecnologias
+          {t('tech')}
         </h3>
       </div>
       <div className="flex flex-wrap  items-center text-white text-left pl-2 xl:pl-20 2xl:pl-28">

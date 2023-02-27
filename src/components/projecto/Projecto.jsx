@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import useMostrar from "../../hook/useMostrar";
 import Button from "../../UI/Button";
 import "./projecto.css";
 
 const Projecto = ({ name, img, tecnologias, descripcion, url,github }) => {
   const {openLinkInNewWindow} = useMostrar()
+  const {t} = useTranslation()
 
   return (
     <div
@@ -28,7 +30,7 @@ const Projecto = ({ name, img, tecnologias, descripcion, url,github }) => {
       <div className="flex justify-center gap-2">
           <Button
           action={()=>openLinkInNewWindow(url)}
-            text={`Demo en vivo`}
+            text={t('liveDemo')}
             className={"hover:border-white border-2 border-black hover:cursor-pointer"}
           />
 

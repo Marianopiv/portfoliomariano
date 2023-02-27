@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
-import { icons } from "../../config/config";
+import { useTranslation } from "react-i18next";
+import translate from "../../assets/translate.png"
 import useMostrar from "../../hook/useMostrar";
 import useServices from "../../hook/useServices";
 
 const Footer = () => {
   const {openLinkInNewWindow} = useMostrar()
   const {fullRedes,obtenerRedesSociales} = useServices()
+  const {t} = useTranslation()
 
   useEffect(() => {
     obtenerRedesSociales()
@@ -14,7 +16,7 @@ const Footer = () => {
     <div className="flex flex-col gap-2 pb-4 sm:pl-9 lg:pl-28 xl:pl-32">
     <div className="flex px-4 pt-10 items-center">
       <h3 className="title text-sm text-left">
-        Contactame para cualquier propuesta o consulta
+        {t('contactame')}
       </h3>
       <div className="flex gap-4 justify-center w-2/4 lg:justify-end lg:gap-4 lg:ml-24">
         {fullRedes&&fullRedes.map(({img,link}, index) => (

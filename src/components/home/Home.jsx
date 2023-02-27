@@ -9,6 +9,7 @@ import ellipse14 from "../../assets/Ellipse-14.svg";
 import withBg from "../../assets/black-white.png";
 import Footer from "../footer/Footer";
 import Button from "../../UI/Button";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const downloadPDF = () => {
@@ -18,27 +19,32 @@ const Home = () => {
     link.download = "CV Pividori Frontend.pdf";
     link.click();
   };
+  const { i18n,t } = useTranslation();
+
+  const handleLanguageChange = () => {
+    console.log("funcion");
+    const newLanguage = i18n.language === "es" ? "en" : "es";
+    i18n.changeLanguage(newLanguage);
+  };
   
 
   return (
     <div className="">
-      <NavBar />
+      <NavBar handleLanguageChange={handleLanguageChange} />
       <div className="drop-shadow-2xl bg-black text-white font-serif text-left flex flex-col pt-4 py-0 sm:items-center">
         <div className="animate__animated animate__fadeIn sm:animate__fadeInLeft py-4 px-10 sm:px-32 flex flex-col justify-center poppins ">
           <div className="flex flex-col justify-center sm:justify-start mt-4 sm:mt-10 sm:flex-row sm:flex-wrap md:flex-col md:gap-10 lg:pl-10">
             <div className="sm:z-20">
               <h3 className="title text-lg font-black sm:text-4xl">
-                Hola, soy Mariano,
+                {t('greeting')}
               </h3>
               <h3 className="text-white sm:text-3xl">
                 {" "}
-                desarrollador frontend
+                {t('jobTitle')}
               </h3>
             </div>
             <p className="text-xs text-gray-500 mt-2 sm:w-2/3 md:w-1/2 lg:w-1/3">
-              Comprometido con la formación continua y la resolución de
-              problemas concretos a través de mis habilidades en el campo de la
-              programación.
+              {t('epigrafe')}
             </p>
             <div className="h-96 sm:h-58 md:h-56  z-50 lg:flex">
               
@@ -53,7 +59,7 @@ const Home = () => {
               <div className="absolute top-3/4 mt-8 sm:mt-0 right-26 sm:top-2/4 sm:left-32 md:top-96 lg:left-48 xl:left-80 xl:pl-6 z-50 hover:cursor-pointer">
                 <Button
                 action={downloadPDF}
-                  text={`Descargar CV`}
+                  text={t('downloadCV')}
                   className={"hover:border-white border-2 border-black btn-class mt-8 text-xs pb-8"}
                 />
               </div>
@@ -69,9 +75,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Portfolio />
+      <Portfolio i18n={i18n}  />
       <Tecnologias />
-      <AboutMe />
+      <AboutMe i18n={i18n} />
       <Footer />
     </div>
   );

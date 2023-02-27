@@ -1,21 +1,17 @@
 import React, { useEffect } from "react";
-import { projects } from "../../config/config";
-import useMostrar from "../../hook/useMostrar";
-import Button from "../../UI/Button";
 import Projecto from "../projecto/Projecto";
 import "animate.css";
 import "./portfolio.css";
 import useServices from "../../hook/useServices";
+import { useTranslation } from "react-i18next";
 
-const Portfolio = () => {
-  const {obtenerProyectos,fullProyectos} = useServices()
-
-  
+const Portfolio = ({i18n}) => {
+  const { obtenerProyectos, fullProyectos } = useServices();
+  const { t } = useTranslation();
 
   useEffect(() => {
-    obtenerProyectos()
-  }, [])
-  
+    obtenerProyectos();
+  }, []);
 
   return (
     <div className="animate__animated animate__fadeIn sm:animate__fadeInUp bg-black pr-2 md:pt-8">
@@ -24,22 +20,25 @@ const Portfolio = () => {
           className="widest font-bold text-white  portfolioTitle sm:pl-9 lg:pl-32 "
           id="portfolio"
         >
-          Proyectos
+          {t('proyectos')}
         </h3>
       </div>
       <div className="flex justify-center">
         <div className="flex flex-col gap-10 sm:flex-row items-center justify-center flex-wrap">
-          {fullProyectos&&fullProyectos.map(({ name, descripcion, img, tecnologias, url,github }) => (
-            <Projecto
-              url={url}
-              key={name}
-              name={name}
-              descripcion={descripcion}
-              img={img}
-              tecnologias={tecnologias}
-              github={github}
-            />
-          ))}
+          {fullProyectos &&
+            fullProyectos.map(
+              ({ name, descripcion, img, tecnologias, url, github,descript }) => (
+                <Projecto
+                  url={url}
+                  key={name}
+                  name={name}
+                  descripcion={i18n.language==="es"?descripcion:descript}
+                  img={img}
+                  tecnologias={tecnologias}
+                  github={github}
+                />
+              )
+            )}
         </div>
       </div>
     </div>

@@ -23,6 +23,7 @@ const useServices = () => {
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
       descripcion: doc.data().descripcion,
+      descript:doc.data().descript,
       github: doc.data().github,
       img: doc.data().img,
       name: doc.data().name,
@@ -47,6 +48,7 @@ const useServices = () => {
       id: doc.id,
       año: Number(doc.data().año),
       texto: doc.data().texto,
+      text: doc.data().text,
     }));
     setFullSobreMi(resultado);
     setFullSobreMi(resultado.sort((a, b) => a.año - b.año))
