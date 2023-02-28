@@ -23,7 +23,6 @@ const Home = () => {
   };
 
   const handleLanguageChange = () => {
-    console.log("funcion");
     const newLanguage = i18n.language === "es" ? "en" : "es";
     i18n.changeLanguage(newLanguage);
   };
