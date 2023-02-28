@@ -7,15 +7,17 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.API_KEY,
-  authDomain: "portfolio-72a0f.firebaseapp.com",
-  projectId: "portfolio-72a0f",
-  storageBucket: "portfolio-72a0f.appspot.com",
-  messagingSenderId: "134085135044",
-  appId: "1:134085135044:web:fd572dbe0b864c2af69791"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
+console.log(firebaseConfig.apiKey);
+console.log(firebaseConfig.projectId)
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const database = getDatabase(app);
