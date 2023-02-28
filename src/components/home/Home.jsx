@@ -28,6 +28,7 @@ const Home = () => {
     i18n.changeLanguage(newLanguage);
   };
   
+  //make me a function that says hello
 
   return (
     <div className="">
