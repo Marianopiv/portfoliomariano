@@ -7,7 +7,7 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDYXCOGMYmC30HLM5l6fyFQ_61-BrUD0nU",
+  apiKey: process.env.API_KEY,
   authDomain: "portfolio-72a0f.firebaseapp.com",
   projectId: "portfolio-72a0f",
   storageBucket: "portfolio-72a0f.appspot.com",
