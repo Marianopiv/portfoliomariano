@@ -19,10 +19,3 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const database = getDatabase(app);
-
-console.log(firebaseConfig.projectId);
-console.log(firebaseConfig.apiKey);
-console.log(firebaseConfig.authDomain);
-console.log(firebaseConfig.storageBucket);
-console.log(firebaseConfig.messagingSenderId);
-console.log(firebaseConfig.appId);
