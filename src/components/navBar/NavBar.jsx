@@ -4,18 +4,13 @@ import translate from "../../assets/translate.png";
 import useMostrar from "../../hook/useMostrar";
 import useServices from "../../hook/useServices";
 
-const NavBar = ({handleLanguageChange}) => {
+const NavBar = ({ handleLanguageChange, fullRedes }) => {
   const { handleClick, openLinkInNewWindow } = useMostrar();
-  const { fullRedes, obtenerRedesSociales } = useServices();
 
-  useEffect(() => {
-    obtenerRedesSociales();
-  }, []);
+  
 
-    const { t } = useTranslation();
-    
+  const { t } = useTranslation();
 
-    
   return (
     <>
       <div className="border-0 w-full bg-black text-white relative sm:flex">
@@ -34,7 +29,7 @@ const NavBar = ({handleLanguageChange}) => {
                   </div>
                 ))}
               <img
-              onClick={handleLanguageChange}
+                onClick={handleLanguageChange}
                 className="w-6 h-6 hover:cursor-pointer"
                 src={translate}
                 alt=""
@@ -47,19 +42,19 @@ const NavBar = ({handleLanguageChange}) => {
             className="text-xs hover:cursor-pointer "
             onClick={() => handleClick("portfolio")}
           >
-            {t('proyectos')}
+            {t("proyectos")}
           </p>
           <p
             className="text-xs hover:cursor-pointer "
             onClick={() => handleClick("tecnologias")}
           >
-            {t('tech')}
+            {t("tech")}
           </p>
           <p
             className="text-xs hover:cursor-pointer "
             onClick={() => handleClick("sobremi")}
           >
-            {t('sobreMi')}
+            {t("sobreMi")}
           </p>
         </div>
         <div className="sm:flex gap-4 justify-center w-1/3 py-2 hidden ">
@@ -74,11 +69,11 @@ const NavBar = ({handleLanguageChange}) => {
               </div>
             ))}
           <img
-              onClick={handleLanguageChange}
-                className="w-6 h-6 hover:cursor-pointer"
-                src={translate}
-                alt=""
-              />
+            onClick={handleLanguageChange}
+            className="w-6 h-6 hover:cursor-pointer"
+            src={translate}
+            alt=""
+          />
         </div>
       </div>
     </>
