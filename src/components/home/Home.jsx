@@ -19,7 +19,7 @@ const Home = () => {
 
   const downloadPDF = () => {
     const fileID = "1Vh4q0aGKN-yNcz_NH-yqDFLaKrkWiLz_";
-    const fileIDEnglish = "1WdK0HTRCWeqPWEyE7jhFWN-8dbKvxEtI";
+    const fileIDEnglish = "1rewuPkCygQHSxOWmmE-ii2z8K2f-Cw8H";
     const link = document.createElement("a");
     link.href = `https://drive.google.com/u/0/uc?id=${
       i18n.language === "es" ? fileID : fileIDEnglish
@@ -27,7 +27,7 @@ const Home = () => {
     link.download = "CV Pividori Frontend.pdf";
     link.click();
   };
-
+  /* https://drive.google.com/file/d/1rewuPkCygQHSxOWmmE-ii2z8K2f-Cw8H/view?usp=share_link */
   const handleLanguageChange = () => {
     const newLanguage = i18n.language === "es" ? "en" : "es";
     i18n.changeLanguage(newLanguage);
