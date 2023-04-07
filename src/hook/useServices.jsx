@@ -13,6 +13,7 @@ const useServices = () => {
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
       habilidad: doc.data().habilidad,
+      order:doc.data().order,
     }));
     setFullHabilidades(resultado);
     setFullHabilidades(resultado.sort((a, b) => a.habilidad.localeCompare(b.habilidad)))

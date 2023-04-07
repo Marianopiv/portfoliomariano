@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import useServices from "../../hook/useServices";
 import "./tecnologias.css"
+import { orderElements } from "../../helper";
 
 const Tecnologias = () => {
   const {obtenerHabilidades,fullHabilidades} = useServices()
@@ -24,7 +25,7 @@ const Tecnologias = () => {
         </h3>
       </div>
       <div className="flex flex-wrap  items-center text-white text-left pl-2 xl:pl-20 2xl:pl-28">
-        {fullHabilidades&&fullHabilidades.map(({id,habilidad}) => (
+        {fullHabilidades&&orderElements(fullHabilidades).map(({id,habilidad,order}) => (
           <div key={id} className="flex items-center gap-2 w-1/2 sm:w-1/3 pb-2">
             <div className="item-point w-3"></div>
             <p className="w-22 h-30">{habilidad}</p>

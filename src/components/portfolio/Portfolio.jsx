@@ -4,6 +4,7 @@ import "animate.css";
 import "./portfolio.css";
 import useServices from "../../hook/useServices";
 import { useTranslation } from "react-i18next";
+import { orderElements } from "../../helper";
 
 const Portfolio = ({i18n}) => {
   const { obtenerProyectos, fullProyectos } = useServices();
@@ -27,7 +28,7 @@ const Portfolio = ({i18n}) => {
       <div className="flex justify-center">
         <div className="flex flex-col gap-10 sm:flex-row items-center justify-center flex-wrap">
           {fullProyectos &&
-            fullProyectos.sort((a, b) => a.order - b.order).map(
+            orderElements(fullProyectos).map(
               ({ name, descripcion, img, tecnologias, url, github,descript,
               order }) => (
                 <Projecto
