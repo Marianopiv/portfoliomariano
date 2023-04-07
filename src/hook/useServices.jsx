@@ -28,6 +28,7 @@ const useServices = () => {
       img: doc.data().img,
       name: doc.data().name,
       tecnologias: doc.data().tecnologias,
+      order:doc.data().order,
       url: doc.data().url,
     }));
     setFullProyectos(resultado);

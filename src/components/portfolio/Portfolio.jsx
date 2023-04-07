@@ -11,6 +11,7 @@ const Portfolio = ({i18n}) => {
 
   useEffect(() => {
     obtenerProyectos();
+    console.log(fullProyectos)
   }, []);
 
   return (
@@ -26,8 +27,9 @@ const Portfolio = ({i18n}) => {
       <div className="flex justify-center">
         <div className="flex flex-col gap-10 sm:flex-row items-center justify-center flex-wrap">
           {fullProyectos &&
-            fullProyectos.map(
-              ({ name, descripcion, img, tecnologias, url, github,descript }) => (
+            fullProyectos.sort((a, b) => a.order - b.order).map(
+              ({ name, descripcion, img, tecnologias, url, github,descript,
+              order }) => (
                 <Projecto
                   url={url}
                   key={name}
@@ -36,6 +38,7 @@ const Portfolio = ({i18n}) => {
                   img={img}
                   tecnologias={tecnologias}
                   github={github}
+                  order={order}
                 />
               )
             )}
