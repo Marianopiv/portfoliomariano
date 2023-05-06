@@ -18,7 +18,7 @@ const Home = () => {
   const { fullRedes, obtenerRedesSociales } = useServices();
 
   const downloadPDF = () => {
-    const fileID = "1Vh4q0aGKN-yNcz_NH-yqDFLaKrkWiLz_";
+    const fileID = "1Qzkq5s39u7aTltL7_83CjwRgwoNncInY";
     const fileIDEnglish = "1rewuPkCygQHSxOWmmE-ii2z8K2f-Cw8H";
     const link = document.createElement("a");
     link.href = `https://drive.google.com/u/0/uc?id=${
