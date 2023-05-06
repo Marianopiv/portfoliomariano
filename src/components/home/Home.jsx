@@ -19,7 +19,7 @@ const Home = () => {
 
   const downloadPDF = () => {
     const fileID = "1Qzkq5s39u7aTltL7_83CjwRgwoNncInY";
-    const fileIDEnglish = "1rewuPkCygQHSxOWmmE-ii2z8K2f-Cw8H";
+    const fileIDEnglish = "1R5dRXbo_XtWzmh8EX63QD_r-h6eDT0vE";
     const link = document.createElement("a");
     link.href = `https://drive.google.com/u/0/uc?id=${
       i18n.language === "es" ? fileID : fileIDEnglish
