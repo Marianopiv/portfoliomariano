@@ -71,7 +71,7 @@ const Home = () => {
                   src={withBg}
                   alt=""
                 />
-                <div className="absolute top-3/4 mt-8 sm:mt-0 right-26 sm:top-2/4 sm:left-32 md:top-96 lg:left-48 xl:left-80 xl:pl-6 z-50 hover:cursor-pointer">
+                <div className="absolute top-3/4 mt-8 sm:mt-0 right-26 sm:top-2/4 sm:left-32 md:top-96 lg:left-48 xl:left-80 xl:pl-6 2xl:left-1/4 2xl:pl-14 z-50 hover:cursor-pointer">
                   <Button
                     action={downloadPDF}
                     text={t("downloadCV")}
