@@ -18,8 +18,8 @@ const Home = () => {
   const { fullRedes, obtenerRedesSociales } = useServices();
 
   const downloadPDF = () => {
-    const fileID = "1Qzkq5s39u7aTltL7_83CjwRgwoNncInY";
-    const fileIDEnglish = "1R5dRXbo_XtWzmh8EX63QD_r-h6eDT0vE";
+    const fileID = "1Swh4GJj9YLxVMa8qqd1qMi0LaqQWj6qV";
+    const fileIDEnglish = "1SvDEFihHAe8rOsNvLDnFFhfcYk-OxwOg";
     const link = document.createElement("a");
     link.href = `https://drive.google.com/u/0/uc?id=${
       i18n.language === "es" ? fileID : fileIDEnglish
@@ -43,7 +43,6 @@ const Home = () => {
         <NavBar
           fullRedes={fullRedes}
           handleLanguageChange={handleLanguageChange}
-          
         />
         <div className="drop-shadow-2xl bg-black text-white font-serif text-left flex flex-col pt-4 py-0 sm:items-center">
           <div className="animate__animated animate__fadeIn sm:animate__fadeInLeft py-4 px-10 sm:px-32 flex flex-col justify-center poppins ">
