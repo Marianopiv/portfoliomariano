@@ -4,15 +4,9 @@ Este es mi portafolio web desarrollado en React, con el cual busco postularme a 
 # Características
 NavBar con enlaces a diferentes secciones del sitio y botón para cambiar el idioma.
 
-Sección "Sobre mí" donde comparto información sobre mi trayectoria y habilidades.
-Sección de "Portafolio" con algunos de mis proyectos destacados.
-Sección de "Tecnologías" donde detallo las herramientas y tecnologías que manejo.
-Sección de "Contacto" donde se encuentran mis redes sociales y un formulario de contacto.
+Sección "Sobre mí" donde comparto información sobre mi trayectoria y habilidades,sección de "Portafolio" con algunos de mis proyectos destacados, sección de "Tecnologías" donde detallo las herramientas y tecnologías que manejo, sección de "Contacto" donde se encuentran mis redes sociales y un formulario de contacto.
 
-Animaciones realizadas con animate.css
-Descarga de CV en formato PDF.
-Soporte para múltiples idiomas, gracias a react-i18next.
-Integración con Google Drive para la descarga del CV.
+Animaciones realizadas con animate.css, descarga de CV en formato PDF,soporte para múltiples idiomas, gracias a react-i18next e integración con Google Drive para la descarga del CV.
 
 # Cómo utilizar
 Clonar este repositorio en su equipo local.
@@ -20,7 +14,7 @@ Instalar las dependencias con npm install.
 Iniciar la aplicación con npm start.
 
 La aplicación estará disponible en su navegador en http://localhost:3000.
-Dependencias utilizadas
+# Dependencias utilizadas
 React
 react-i18next
 animate.css
