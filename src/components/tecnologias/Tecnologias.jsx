@@ -12,6 +12,7 @@ const Tecnologias = () => {
 
   useEffect(() => {
     obtenerHabilidades()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
   return (
