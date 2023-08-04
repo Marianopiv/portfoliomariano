@@ -12,7 +12,6 @@ const Portfolio = ({i18n}) => {
 
   useEffect(() => {
     obtenerProyectos();
-    console.log(fullProyectos)
   }, []);
 
   return (

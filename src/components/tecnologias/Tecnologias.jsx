@@ -14,7 +14,6 @@ const Tecnologias = () => {
     obtenerHabilidades()
   }, [])
   
-  console.log(fullHabilidades)
   return (
     <div className="bg-black pt-4 pl-2 sm:pl-9 lg:flex lg:flex-col lg justify-between lg:pl-32  lg:w-screen">
       <div className=" text-white pb-4 px-2">
