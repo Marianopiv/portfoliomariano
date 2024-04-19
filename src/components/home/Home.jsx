@@ -18,8 +18,8 @@ const Home = () => {
   const { fullRedes, obtenerRedesSociales } = useServices();
 
   const downloadPDF = () => {
-    const fileID = "1Swh4GJj9YLxVMa8qqd1qMi0LaqQWj6qV";
-    const fileIDEnglish = "1SvDEFihHAe8rOsNvLDnFFhfcYk-OxwOg";
+    const fileID = "13r3-SA5jpAFuaxGiIFVBsQYJEOqYFWpC";
+    const fileIDEnglish = "1eUUSG9_1g2_9V-PRAEP2WtVlIBfcErJw";
     const link = document.createElement("a");
     link.href = `https://drive.google.com/u/0/uc?id=${
       i18n.language === "es" ? fileID : fileIDEnglish
