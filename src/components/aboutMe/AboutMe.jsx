@@ -50,7 +50,7 @@ const AboutMe = ({i18n}) => {
               <div className="item-point w-3 z-20 ">
               </div>
               <p className="w-40 text-left text-[#4f5257] story pt-3 xl:text-left ">
-                {i18n.language==="es"?texto&&texto&&año===2022?texto.slice(0, 288):texto:text}
+                {i18n.language==="es"?texto&&texto&&año===2022?texto.slice(0, 400):texto:text}
               </p>
             </div>
           ))}
