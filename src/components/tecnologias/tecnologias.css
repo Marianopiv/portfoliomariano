@@ -4,5 +4,6 @@
   top: 0px;
   border-radius: 83px;
   background: linear-gradient(326.6deg, #13ADC7 21.25%, #6978D1 58.73%, #945DD6 77.47%);
+  box-shadow: 0 6px 18px rgba(19, 173, 199, 0.35);
 
 }

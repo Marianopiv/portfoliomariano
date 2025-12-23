@@ -5,7 +5,13 @@
     line-height: 21px;
     letter-spacing: 0em;
     text-align: left;
+    color: #b4bdcc;
     
+}
+
+.timeline-line {
+    border-color: rgba(105, 120, 209, 0.6);
+    box-shadow: 0 8px 18px rgba(19, 173, 199, 0.2);
 }
 @media (min-width: 640px) {
     .sm\:left-custom {

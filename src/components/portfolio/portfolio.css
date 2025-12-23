@@ -5,4 +5,22 @@
   font-size: 20px;
   line-height: 30px;
   text-align:left;
+  letter-spacing: 0.06em;
+  background: linear-gradient(270deg, #13adc7 0%, #6978d1 60%, #b27bf4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 30px rgba(19, 173, 199, 0.2);
+  display: inline-block;
+  position: relative;
+}
+
+.portfolioTitle::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #13adc7, #6978d1, #b27bf4);
+  box-shadow: 0 8px 20px rgba(19, 173, 199, 0.25);
 }

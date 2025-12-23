@@ -4,19 +4,23 @@ import useMostrar from "../../hook/useMostrar";
 import Button from "../../UI/Button";
 import "./projecto.css";
 
-const Projecto = ({ name, img, tecnologias, descripcion, url,github }) => {
+const Projecto = ({ name, img, tecnologias, descripcion, url, github, index }) => {
   const {openLinkInNewWindow} = useMostrar()
   const {t} = useTranslation()
+  const staggerDelay = `${Math.min(index, 6) * 80}ms`;
 
   return (
     <div
       key={name}
-      className="flex flex-col items-center justify-content-center w-80  sm:h-1/8  p-4 gap-2  border border-l-[#945dd6] border-y-[#6978d1] border-r-[#13adc7] rounded-lg"
+      className="project-card flex flex-col items-center justify-content-center w-80  sm:h-1/8  p-4 gap-2  border border-l-[#945dd6] border-y-[#6978d1] border-r-[#13adc7] rounded-lg"
+      style={{ animationDelay: staggerDelay }}
     >
       <img
-        className="w-52 rounded-sm h-26 sm:h-28 hover:cursor-pointer "
+        className="project-card__image w-52 rounded-sm h-26 sm:h-28"
         src={img}
         alt=""
+        loading="lazy"
+        decoding="async"
       />
       <h3 className="font-bold tracking-wide text-white">{name}</h3>{" "}
       <div className="flex flex-col justify-around">

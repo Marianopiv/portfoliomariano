@@ -1,0 +1,155 @@
+.contact-shell {
+  padding: 20px 16px 32px;
+  text-align: left;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 18px;
+  max-width: 720px;
+  margin: 0;
+}
+
+.contact-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.contact-subtitle {
+  max-width: 420px;
+  color: #b4bdcc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(19, 173, 199, 0.2);
+  background: linear-gradient(180deg, rgba(19, 173, 199, 0.08), rgba(5, 7, 10, 0.9));
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.contact-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(19, 173, 199, 0.15);
+  overflow: hidden;
+}
+
+.contact-icon img {
+  width: 34px;
+  height: 48px;
+  display: block;
+}
+
+.contact-icon--accent {
+  background: radial-gradient(circle, rgba(148, 93, 214, 0.6), rgba(19, 173, 199, 0.1));
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #7f8aa1;
+}
+
+.contact-link {
+  color: #e5ecf7;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-text {
+  color: #e5ecf7;
+  font-weight: 600;
+}
+
+.contact-form {
+  background: rgba(8, 10, 14, 0.8);
+  border: 1px solid rgba(105, 120, 209, 0.3);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-field input,
+.contact-field textarea {
+  background: rgba(5, 7, 10, 0.8);
+  border: 1px solid rgba(19, 173, 199, 0.2);
+  border-radius: 12px;
+  padding: 9px 12px;
+  color: #e5ecf7;
+  font-size: 0.85rem;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: rgba(178, 123, 244, 0.8);
+  box-shadow: 0 0 0 2px rgba(19, 173, 199, 0.25);
+}
+
+.contact-send {
+  width: 145px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  height: 55px;
+  font-size: 0.75rem;
+  padding: 0;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-send--ghost {
+  box-shadow: none;
+}
+
+@media (min-width: 900px) {
+  .contact-shell {
+    padding: 28px 64px 40px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact-shell {
+    padding-left: 128px;
+    padding-right: 96px;
+  }
+}

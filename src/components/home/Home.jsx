@@ -9,6 +9,7 @@ import ellipse14 from "../../assets/Ellipse-14.svg";
 import withBg from "../../assets/black-white.png";
 import Footer from "../footer/Footer";
 import Button from "../../UI/Button";
+import Contact from "../contact/Contact";
 import { useTranslation } from "react-i18next";
 import useServices from "../../hook/useServices";
 import Loading from "../../UI/Loading";
@@ -35,7 +36,33 @@ const Home = () => {
   useEffect(() => {
     obtenerRedesSociales();
   }, []);
-  if (fullRedes === "") {
+  useEffect(() => {
+    if (fullRedes === null) {
+      return undefined;
+    }
+    const elements = Array.from(document.querySelectorAll(".reveal"));
+    if (!elements.length) {
+      return undefined;
+    }
+    if (!("IntersectionObserver" in window)) {
+      elements.forEach((el) => el.classList.add("is-visible"));
+      return undefined;
+    }
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: "0px 0px -10% 0px" }
+    );
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, [fullRedes]);
+  if (fullRedes === null) {
     return <Loading />;
   } else {
     return (
@@ -44,7 +71,7 @@ const Home = () => {
           fullRedes={fullRedes}
           handleLanguageChange={handleLanguageChange}
         />
-        <div className="drop-shadow-2xl bg-black text-white font-serif text-left flex flex-col pt-4 py-0 sm:items-center">
+        <div className="reveal drop-shadow-2xl bg-black text-white font-serif text-left flex flex-col pt-4 py-0 sm:items-center">
           <div className="animate__animated animate__fadeIn sm:animate__fadeInLeft py-4 px-10 sm:px-32 flex flex-col justify-center poppins ">
             <div className="flex flex-col justify-center sm:justify-start mt-4 sm:mt-10 sm:flex-row sm:flex-wrap md:flex-col md:gap-10 lg:pl-10">
               <div className="sm:z-20">
@@ -56,11 +83,12 @@ const Home = () => {
               <p className="text-xs text-gray-500 mt-2 sm:w-2/3 md:w-1/2 lg:w-1/3">
                 {t("epigrafe")}
               </p>
-              <div className="h-96 sm:h-58 md:h-56  z-50 lg:flex">
+              <div className="hero-visual h-96 sm:h-58 md:h-56  z-50 lg:flex">
                 <img
                   className="ellipse-14 md:hidden sm:top-20 md:left-130 "
                   src={ellipse14}
                   alt=""
+                  decoding="async"
                   srcset=""
                 />
                 <div className="absolute ellipse-15 rounded-full sm:left-135 sm:top-44 md:left-150 md:hidden"></div>
@@ -69,6 +97,7 @@ const Home = () => {
                   className="absolute cv border-2 border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 sm:left-120 sm:top-10 md:left-140 md:hidden"
                   src={withBg}
                   alt=""
+                  decoding="async"
                 />
                 <div className="absolute top-3/4 mt-8 sm:mt-0 right-26 sm:top-2/4 sm:left-32 md:top-96 lg:left-48 xl:left-80 xl:pl-6 2xl:left-1/4 2xl:pl-14 z-50 hover:cursor-pointer">
                   <Button
@@ -86,6 +115,7 @@ const Home = () => {
                     className="hidden cvlg border-2 border-r-cyan-400 border-l-violet-400 border-t-blue-400 border-b-blue-300 md:flex md:left-2/4 lg:left-auto"
                     src={withBg}
                     alt=""
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -95,6 +125,7 @@ const Home = () => {
         <Portfolio i18n={i18n} />
         <Tecnologias />
         <AboutMe i18n={i18n} />
+        <Contact i18n={i18n} />
         <Footer />
       </div>
     );

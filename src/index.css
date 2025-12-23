@@ -4,7 +4,7 @@
 
 :root {
   font-family: "Poppins";
-  background-color: black;
+  background-color: #05070a;
   font-style: normal;
   line-height: 27px;
   font-synthesis: none;
@@ -39,6 +39,10 @@ body {
   margin: 0 auto;
   justify-content: center;
   display: flex;
+  background-color: #05070a;
+  background-image: radial-gradient(800px 400px at 10% 10%, rgba(19, 173, 199, 0.12), rgba(0, 0, 0, 0)),
+    radial-gradient(900px 500px at 90% 20%, rgba(148, 93, 214, 0.12), rgba(0, 0, 0, 0)),
+    radial-gradient(700px 500px at 50% 80%, rgba(105, 120, 209, 0.12), rgba(0, 0, 0, 0));
 }
 
 h1 {

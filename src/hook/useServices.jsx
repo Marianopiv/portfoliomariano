@@ -1,42 +1,42 @@
 import { collection, getDocs } from "firebase/firestore";
-import  { useState } from "react";
+import { useState } from "react";
 import { db } from "../FireBase";
 
 const useServices = () => {
-  const [fullHabilidades, setFullHabilidades] = useState("");
-  const [fullProyectos, setFullProyectos] = useState("");
-  const [fullRedes, setFullRedes] = useState("");
-  const [fullSobreMi, setFullSobreMi] = useState("");
+  const [fullHabilidades, setFullHabilidades] = useState(null);
+  const [fullProyectos, setFullProyectos] = useState(null);
+  const [fullRedes, setFullRedes] = useState(null);
+  const [fullSobreMi, setFullSobreMi] = useState(null);
 
   const obtenerHabilidades = async () => {
-    const usus = await getDocs(collection(db, `habilidades`));
+    const usus = await getDocs(collection(db, "habilidades"));
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
       habilidad: doc.data().habilidad,
-      order:doc.data().order,
+      order: doc.data().order,
     }));
-    setFullHabilidades(resultado);
-    setFullHabilidades(resultado.sort((a, b) => a.habilidad.localeCompare(b.habilidad)))
+    const sorted = resultado.sort((a, b) => a.habilidad.localeCompare(b.habilidad));
+    setFullHabilidades(sorted);
   };
 
   const obtenerProyectos = async () => {
-    const usus = await getDocs(collection(db, `proyectos`));
+    const usus = await getDocs(collection(db, "proyectos"));
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
       descripcion: doc.data().descripcion,
-      descript:doc.data().descript,
+      descript: doc.data().descript,
       github: doc.data().github,
       img: doc.data().img,
       name: doc.data().name,
       tecnologias: doc.data().tecnologias,
-      order:doc.data().order,
+      order: doc.data().order,
       url: doc.data().url,
     }));
     setFullProyectos(resultado);
   };
 
   const obtenerRedesSociales = async () => {
-    const usus = await getDocs(collection(db, `redes sociales`));
+    const usus = await getDocs(collection(db, "redes sociales"));
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
       img: doc.data().img,
@@ -44,17 +44,31 @@ const useServices = () => {
     }));
     setFullRedes(resultado);
   };
+
   const obtenerSobreMi = async () => {
-    const usus = await getDocs(collection(db, `sobre mi`));
+    const usus = await getDocs(collection(db, "sobre mi"));
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
-      año: Number(doc.data().año),
+      aAño: (() => {
+        const data = doc.data();
+        const rawYear = data.aAño ?? data["año"] ?? data.anio;
+        if (rawYear === undefined || rawYear === null) {
+          return null;
+        }
+        if (typeof rawYear === "string") {
+          const cleaned = rawYear.replace(/[^\d]/g, "");
+          return cleaned ? Number(cleaned) : null;
+        }
+        const value = Number(rawYear);
+        return Number.isNaN(value) ? null : value;
+      })(),
       texto: doc.data().texto,
       text: doc.data().text,
     }));
-    setFullSobreMi(resultado);
-    setFullSobreMi(resultado.sort((a, b) => a.año - b.año))
+    const sorted = resultado.sort((a, b) => (a.aAño ?? 0) - (b.aAño ?? 0));
+    setFullSobreMi(sorted);
   };
+
   return {
     obtenerHabilidades,
     fullHabilidades,
