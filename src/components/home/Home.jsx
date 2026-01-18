@@ -35,7 +35,7 @@ const Home = () => {
 
   useEffect(() => {
     obtenerRedesSociales();
-  }, []);
+  }, [obtenerRedesSociales]);
   useEffect(() => {
     if (fullRedes === null) {
       return undefined;

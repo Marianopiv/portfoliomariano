@@ -9,7 +9,7 @@ const AboutMe = ({ i18n }) => {
 
   useEffect(() => {
     obtenerSobreMi();
-  }, []);
+  }, [obtenerSobreMi]);
 
   return (
     <div className="section-block reveal bg-black text-white pl-4 lg:pl-24">

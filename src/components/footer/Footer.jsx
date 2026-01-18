@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import translate from "../../assets/translate.png"
 import useMostrar from "../../hook/useMostrar";
 import useServices from "../../hook/useServices";
 
@@ -11,7 +10,7 @@ const Footer = () => {
 
   useEffect(() => {
     obtenerRedesSociales()
-  }, [])
+  }, [obtenerRedesSociales])
   return (
     <div className="footer-shell reveal flex flex-col gap-2 pb-4 sm:pl-9 lg:pl-28 xl:pl-32">
     <div className="flex px-4 pt-10 items-center">

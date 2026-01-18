@@ -1,6 +1,5 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import useServices from "../hook/useServices";
 
 i18n.use(initReactI18next).init({
   lng: "es",

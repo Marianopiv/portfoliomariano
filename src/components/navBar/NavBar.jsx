@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import translate from "../../assets/translate.png";
 import useMostrar from "../../hook/useMostrar";
-import useServices from "../../hook/useServices";
 
 const NavBar = ({ handleLanguageChange, fullRedes }) => {
   const { handleClick, openLinkInNewWindow } = useMostrar();
