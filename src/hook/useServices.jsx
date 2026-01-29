@@ -1,5 +1,5 @@
 import { collection, getDocs } from "firebase/firestore";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { db } from "../FireBase";
 
 const useServices = () => {
@@ -8,7 +8,7 @@ const useServices = () => {
   const [fullRedes, setFullRedes] = useState(null);
   const [fullSobreMi, setFullSobreMi] = useState(null);
 
-  const obtenerHabilidades = async () => {
+  const obtenerHabilidades = useCallback(async () => {
     const usus = await getDocs(collection(db, "habilidades"));
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
@@ -17,9 +17,9 @@ const useServices = () => {
     }));
     const sorted = resultado.sort((a, b) => a.habilidad.localeCompare(b.habilidad));
     setFullHabilidades(sorted);
-  };
+  }, []);
 
-  const obtenerProyectos = async () => {
+  const obtenerProyectos = useCallback(async () => {
     const usus = await getDocs(collection(db, "proyectos"));
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
@@ -33,9 +33,9 @@ const useServices = () => {
       url: doc.data().url,
     }));
     setFullProyectos(resultado);
-  };
+  }, []);
 
-  const obtenerRedesSociales = async () => {
+  const obtenerRedesSociales = useCallback(async () => {
     const usus = await getDocs(collection(db, "redes sociales"));
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
@@ -43,9 +43,9 @@ const useServices = () => {
       link: doc.data().link,
     }));
     setFullRedes(resultado);
-  };
+  }, []);
 
-  const obtenerSobreMi = async () => {
+  const obtenerSobreMi = useCallback(async () => {
     const usus = await getDocs(collection(db, "sobre mi"));
     const resultado = usus.docs.map((doc) => ({
       id: doc.id,
@@ -67,7 +67,7 @@ const useServices = () => {
     }));
     const sorted = resultado.sort((a, b) => (a.aAño ?? 0) - (b.aAño ?? 0));
     setFullSobreMi(sorted);
-  };
+  }, []);
 
   return {
     obtenerHabilidades,
