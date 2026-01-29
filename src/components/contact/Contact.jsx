@@ -7,6 +7,9 @@ const Contact = ({ i18n }) => {
   const { t } = useTranslation();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const targetEmail = "marianopividori93@gmail.com";
+  const webhookUrl =
+    "https://marianopividori.app.n8n.cloud/webhook/portfolio-contact";
+  const [status, setStatus] = useState({ state: "idle", message: "" });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -24,8 +27,35 @@ const Contact = ({ i18n }) => {
     subject
   )}&body=${encodeURIComponent(body)}`;
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setStatus({ state: "loading", message: "" });
+    try {
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!response.ok) {
+        throw new Error("Error enviando el mensaje");
+      }
+      setForm({ name: "", email: "", message: "" });
+      setStatus({
+        state: "success",
+        message:
+          i18n.language === "es"
+            ? "Mensaje enviado. Gracias!"
+            : "Message sent. Thank you!",
+      });
+    } catch (error) {
+      setStatus({
+        state: "error",
+        message:
+          i18n.language === "es"
+            ? "No se pudo enviar. Probá más tarde."
+            : "Could not send. Please try later.",
+      });
+    }
   };
 
   const handleCopy = async () => {
@@ -108,9 +138,19 @@ const Contact = ({ i18n }) => {
             />
           </label>
           <div className="contact-actions">
-            <a className="btn-class contact-send" href={mailtoHref}>
-              {i18n.language === "es" ? "Enviar mensaje" : "Send message"}
-            </a>
+            <button
+              type="submit"
+              className="btn-class contact-send"
+              disabled={status.state === "loading"}
+            >
+              {status.state === "loading"
+                ? i18n.language === "es"
+                  ? "Enviando..."
+                  : "Sending..."
+                : i18n.language === "es"
+                  ? "Enviar mensaje"
+                  : "Send message"}
+            </button>
             <button
               type="button"
               className="btn-class btnBlack contact-send contact-send--ghost"
@@ -125,6 +165,24 @@ const Contact = ({ i18n }) => {
                   : "Copy message"}
             </button>
           </div>
+          {status.message && (
+            <p
+              className={`contact-status contact-status--${status.state}`}
+              role="status"
+            >
+              {status.message}
+            </p>
+          )}
+          {status.state === "error" && (
+            <p className="contact-status contact-status--idle">
+              {i18n.language === "es"
+                ? "Si preferís, podés enviarlo desde tu mail:"
+                : "If you prefer, you can send it from your email:"}{" "}
+              <a className="contact-link" href={mailtoHref}>
+                {targetEmail}
+              </a>
+            </p>
+          )}
         </form>
       </div>
     </section>
