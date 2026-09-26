@@ -1,82 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  font-family: "Poppins";
-  background-color: #05070a;
-  font-style: normal;
-  line-height: 27px;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-@media (max-width: 400px) {
-  :root {
-    width:screen;
-  }
-}
-@media (min-width: 768px) and (max-width: 1330px) {
-  :root {
-    width:screen;
-    display: flex;
-    margin:0 10px;
-  }
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0 auto;
-  justify-content: center;
-  display: flex;
-  background-color: #05070a;
-  background-image: radial-gradient(800px 400px at 10% 10%, rgba(19, 173, 199, 0.12), rgba(0, 0, 0, 0)),
-    radial-gradient(900px 500px at 90% 20%, rgba(148, 93, 214, 0.12), rgba(0, 0, 0, 0)),
-    radial-gradient(700px 500px at 50% 80%, rgba(105, 120, 209, 0.12), rgba(0, 0, 0, 0));
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #000; color: #f3f5fb; font-family: 'DM Sans', sans-serif; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+a { color: inherit; text-decoration: none; }
+::selection { background: #74d9e9; color: #071015; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
