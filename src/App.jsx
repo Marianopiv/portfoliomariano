@@ -29,13 +29,13 @@ const content = {
     projectsIntro: 'My technical background is practical. These projects show how I approach a problem, build a solution and keep learning.',
     projects: [
       ['Admin Gastos', 'Internal tool · React / TypeScript / Firebase', 'A vehicle expense management app I built for the company where I work. It brings records, authentication and alerts into one daily workflow.', adminImage],
-      ['Typing God', 'Interactive game · React / Firebase', 'A typing game that challenged me to work through application logic, event handling and live player feedback.', typingImage, 'typing-god'],
-      ['Question X Trivia App', 'Trivia · React / TypeScript / Firebase', 'A trivia app with Google authentication and saved progress, built while exploring customized Material UI components.', questionImage],
-      ['Pivflix', 'Movie explorer · React', 'A movie interface built around reusable components, API requests and working with external media.', pivflixImage],
-      ['Yu Gi Oh Enciclopedia', 'API explorer · React', 'A searchable card encyclopedia with filters and pagination over an external API.', yugiohImage, 'yu-gi-oh'],
-      ['Mercado Pivo', 'Storefront · React', 'A small storefront where I worked with React Context, routing and product data.', mercadoImage, 'mercadopiv'],
+      ['Typing God', 'Interactive game · React / Firebase', 'A typing game that challenged me to work through application logic, event handling and live player feedback.', typingImage, 'typing-god', 'https://typing-god.vercel.app/'],
+      ['Question X Trivia App', 'Trivia · React / TypeScript / Firebase', 'A trivia app with Google authentication and saved progress, built while exploring customized Material UI components.', questionImage, null, 'https://trivia-app-nine-ebon.vercel.app/'],
+      ['Pivflix', 'Movie explorer · React', 'A movie interface built around reusable components, API requests and working with external media.', pivflixImage, null, 'https://movies-pied-ten.vercel.app/'],
+      ['Yu Gi Oh Enciclopedia', 'API explorer · React', 'A searchable card encyclopedia with filters and pagination over an external API.', yugiohImage, 'yu-gi-oh', 'https://yu-gi-oh-iota.vercel.app/'],
+      ['Mercado Pivo', 'Storefront · React', 'A small storefront where I worked with React Context, routing and product data.', mercadoImage, 'mercadopiv', 'https://mercadopiv.vercel.app/'],
       ['Banderas', 'Country explorer · React', 'A country data app with filtering and a dark mode, built to practice working with APIs.', banderasImage, 'banderas'],
-      ['Portfolio Mariano', 'This website · React', 'My portfolio, now bringing together my work with people, operations and software.', portfolioImage, 'portfoliomariano'],
+      ['Portfolio Mariano', 'This website · React', 'My portfolio, now bringing together my work with people, operations and software.', portfolioImage, 'portfoliomariano', 'https://portfoliomariano.vercel.app/'],
     ],
     live: 'Open live project ↗', source: 'View source ↗', moreProjects: 'More projects on GitHub ↗',
     skillsLabel: 'How I work', skillsTitle: 'A useful mix of human and technical skills.',
@@ -68,13 +68,13 @@ const content = {
     projectsIntro: 'Mi formación técnica es práctica. Estos proyectos muestran cómo encaro un problema, construyo una solución y sigo aprendiendo.',
     projects: [
       ['Admin Gastos', 'Herramienta interna · React / TypeScript / Firebase', 'Una aplicación de gestión de gastos de vehículos que construí para la empresa donde trabajo. Reúne registros, autenticación y alertas en un flujo cotidiano.', adminImage],
-      ['Typing God', 'Juego interactivo · React / Firebase', 'Un juego de tipeo que me desafió a resolver la lógica de la aplicación, los eventos y la respuesta en tiempo real al jugador.', typingImage, 'typing-god'],
-      ['Question X Trivia App', 'Trivia · React / TypeScript / Firebase', 'Una trivia con autenticación de Google y progreso guardado, desarrollada mientras exploraba componentes personalizados de Material UI.', questionImage],
-      ['Pivflix', 'Películas · React', 'Una interfaz de películas para trabajar con componentes reutilizables, llamados a una API y archivos externos.', pivflixImage],
-      ['Yu Gi Oh Enciclopedia', 'Explorador de API · React', 'Una enciclopedia de cartas con búsqueda, filtros y paginación sobre una API externa.', yugiohImage, 'yu-gi-oh'],
-      ['Mercado Pivo', 'Tienda · React', 'Una pequeña tienda en la que trabajé con React Context, rutas y datos de productos.', mercadoImage, 'mercadopiv'],
+      ['Typing God', 'Juego interactivo · React / Firebase', 'Un juego de tipeo que me desafió a resolver la lógica de la aplicación, los eventos y la respuesta en tiempo real al jugador.', typingImage, 'typing-god', 'https://typing-god.vercel.app/'],
+      ['Question X Trivia App', 'Trivia · React / TypeScript / Firebase', 'Una trivia con autenticación de Google y progreso guardado, desarrollada mientras exploraba componentes personalizados de Material UI.', questionImage, null, 'https://trivia-app-nine-ebon.vercel.app/'],
+      ['Pivflix', 'Películas · React', 'Una interfaz de películas para trabajar con componentes reutilizables, llamados a una API y archivos externos.', pivflixImage, null, 'https://movies-pied-ten.vercel.app/'],
+      ['Yu Gi Oh Enciclopedia', 'Explorador de API · React', 'Una enciclopedia de cartas con búsqueda, filtros y paginación sobre una API externa.', yugiohImage, 'yu-gi-oh', 'https://yu-gi-oh-iota.vercel.app/'],
+      ['Mercado Pivo', 'Tienda · React', 'Una pequeña tienda en la que trabajé con React Context, rutas y datos de productos.', mercadoImage, 'mercadopiv', 'https://mercadopiv.vercel.app/'],
       ['Banderas', 'Países · React', 'Una app de datos de países con filtros y modo oscuro, creada para practicar el trabajo con APIs.', banderasImage, 'banderas'],
-      ['Portfolio Mariano', 'Este sitio · React', 'Mi portfolio, que ahora reúne mi trabajo con personas, operaciones y software.', portfolioImage, 'portfoliomariano'],
+      ['Portfolio Mariano', 'Este sitio · React', 'Mi portfolio, que ahora reúne mi trabajo con personas, operaciones y software.', portfolioImage, 'portfoliomariano', 'https://portfoliomariano.vercel.app/'],
     ],
     live: 'Abrir proyecto ↗', source: 'Ver código ↗', moreProjects: 'Más proyectos en GitHub ↗',
     skillsLabel: 'Cómo trabajo', skillsTitle: 'Una combinación útil de habilidades humanas y técnicas.',
@@ -103,6 +103,10 @@ const safeUrl = value => {
     return null;
   }
 };
+const safeDemoUrl = value => {
+  const url = safeUrl(value);
+  return url && new URL(url).hostname !== 'github.com' ? url : null;
+};
 
 function projectCard(project, featured, language) {
   const name = normalizeName(project.name);
@@ -118,7 +122,7 @@ function projectCard(project, featured, language) {
     tag: local?.[1] || project.tecnologias,
     body: local?.[2] || (language === 'es' ? project.descripcion : project.descript || project.descripcion),
     image: local?.[3] || project.img,
-    demo: safeUrl(project.url),
+    demo: safeDemoUrl(project.url) || safeDemoUrl(local?.[5]),
     source: safeUrl(project.github) || (local?.[4] ? `${github}/${local[4]}` : null),
   };
 }
@@ -139,8 +143,8 @@ function App() {
   }, []);
   const projects = firebaseProjects?.length
     ? firebaseProjects.map(project => projectCard(project, t.projects, language))
-    : t.projects.map(([title, tag, body, image, repo]) => ({
-      title, tag, body, image, demo: null, source: repo ? `${github}/${repo}` : null,
+    : t.projects.map(([title, tag, body, image, repo, demo]) => ({
+      title, tag, body, image, demo: safeDemoUrl(demo), source: repo ? `${github}/${repo}` : null,
     }));
   return <div className="site-shell" lang={language}>
     <header className="site-header"><div className="container header-inner">
