@@ -28,7 +28,7 @@ const content = {
     projectsLabel: 'Things I’ve built', projectsTitle: 'Software built around real problems and curiosity.',
     projectsIntro: 'My technical background is practical. These projects show how I approach a problem, build a solution and keep learning.',
     projects: [
-      ['Admin Gastos', 'Internal tool · React / TypeScript / Firebase', 'A vehicle expense management app I built for the company where I work. It brings records, authentication and alerts into one daily workflow.', adminImage],
+      ['Admin Gastos', 'Internal tool · React / TypeScript / Firebase', 'A vehicle expense management app I built for the company where I work. It brings records, authentication and alerts into one daily workflow. Demo account: prueba123@gmail.com / password: prueba999.', adminImage],
       ['Typing God', 'Interactive game · React / Firebase', 'A typing game that challenged me to work through application logic, event handling and live player feedback.', typingImage, 'typing-god', 'https://typing-god.vercel.app/'],
       ['Question X Trivia App', 'Trivia · React / TypeScript / Firebase', 'A trivia app with Google authentication and saved progress, built while exploring customized Material UI components.', questionImage, null, 'https://trivia-app-nine-ebon.vercel.app/'],
       ['Pivflix', 'Movie explorer · React', 'A movie interface built around reusable components, API requests and working with external media.', pivflixImage, null, 'https://movies-pied-ten.vercel.app/'],
@@ -67,7 +67,7 @@ const content = {
     projectsLabel: 'Cosas que construí', projectsTitle: 'Software nacido de problemas reales y de la curiosidad.',
     projectsIntro: 'Mi formación técnica es práctica. Estos proyectos muestran cómo encaro un problema, construyo una solución y sigo aprendiendo.',
     projects: [
-      ['Admin Gastos', 'Herramienta interna · React / TypeScript / Firebase', 'Una aplicación de gestión de gastos de vehículos que construí para la empresa donde trabajo. Reúne registros, autenticación y alertas en un flujo cotidiano.', adminImage],
+      ['Admin Gastos', 'Herramienta interna · React / TypeScript / Firebase', 'Una aplicación de gestión de gastos de vehículos que construí para la empresa donde trabajo. Reúne registros, autenticación y alertas en un flujo cotidiano. Usuario de prueba: prueba123@gmail.com / contraseña: prueba999.', adminImage],
       ['Typing God', 'Juego interactivo · React / Firebase', 'Un juego de tipeo que me desafió a resolver la lógica de la aplicación, los eventos y la respuesta en tiempo real al jugador.', typingImage, 'typing-god', 'https://typing-god.vercel.app/'],
       ['Question X Trivia App', 'Trivia · React / TypeScript / Firebase', 'Una trivia con autenticación de Google y progreso guardado, desarrollada mientras exploraba componentes personalizados de Material UI.', questionImage, null, 'https://trivia-app-nine-ebon.vercel.app/'],
       ['Pivflix', 'Películas · React', 'Una interfaz de películas para trabajar con componentes reutilizables, llamados a una API y archivos externos.', pivflixImage, null, 'https://movies-pied-ten.vercel.app/'],
@@ -97,7 +97,7 @@ const github = 'https://github.com/Marianopiv';
 const normalizeName = value => String(value || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');
 const hiddenProjects = new Set([
   'piedrapapelotijera', 'tipcalculator', 'tictactoe',
-  'escapeabali', 'ninjamail', 'ninjaemail', 'portfoliomariano',
+  'escapeabali', 'ninjamail', 'ninjaemail', 'portfoliomariano', 'mercadopivo',
 ]);
 const safeUrl = value => {
   try {
