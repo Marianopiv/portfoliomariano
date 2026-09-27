@@ -60,15 +60,19 @@ h2 { max-width: 780px; margin: 0; font-size: clamp(31px, 3.3vw, 47px); line-heig
 .role-body { color: var(--muted); line-height: 1.7; margin: 0; font-size: 14px; }
 .work-section { background: #000; border-block: 1px solid #192535; }
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
-.project-card { overflow: hidden; border: 1px solid transparent; border-radius: 8px; background: linear-gradient(#050c10, #050c10) padding-box, linear-gradient(125deg, #945dd6, #6978d1 55%, #13adc7) border-box; display: flex; flex-direction: column; box-shadow: 0 16px 40px #0008; }
+.project-card { position: relative; overflow: hidden; border: 1px solid transparent; border-radius: 8px; background: linear-gradient(#050c10, #050c10) padding-box, linear-gradient(125deg, #945dd6, #6978d1 55%, #13adc7) border-box; display: flex; flex-direction: column; box-shadow: 0 16px 40px #0008; }
 .project-art { height: 170px; margin: 18px 18px 0; overflow: hidden; display: grid; place-items: center; background: #091116; }
+.project-art a { display: block; width: 100%; height: 100%; }
 .project-art img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
 .project-content { padding: 20px; display: flex; flex-direction: column; flex: 1; }
 .project-tag { margin: 0 0 11px; color: #8e9ba9; font-size: 11px; font-weight: 700; }
 .project-content h3 { font-size: 22px; letter-spacing: -.03em; margin: 0 0 12px; }
 .project-content > p:not(.project-tag) { color: var(--muted); line-height: 1.65; font-size: 13px; margin: 0; }
-.project-content a { align-self: flex-start; color: white; font-size: 12px; font-weight: 700; margin-top: auto; padding: 10px 18px; border-radius: 999px; background: linear-gradient(110deg, #945dd6, #6978d1, #13adc7); }
-.project-content a.project-source { margin-top: 22px; }
+.project-content .project-title-link { color: inherit; }
+.project-title-link::after { content: ''; position: absolute; inset: 0; }
+.project-links { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; margin-top: auto; padding-top: 22px; }
+.project-links a { position: relative; z-index: 1; color: white; font-size: 12px; font-weight: 700; padding: 10px 15px; border-radius: 999px; background: linear-gradient(110deg, #945dd6, #6978d1, #13adc7); }
+.project-links a.project-source { background: #121b26; border: 1px solid #465a73; }
 .more-link { display: inline-block; margin-top: 32px; color: var(--cyan); font-size: 14px; font-weight: 700; }
 .more-link:hover, .project-content a:hover { text-decoration: underline; }
 .skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
